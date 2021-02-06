@@ -1,0 +1,413 @@
+* {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+
+@font-face {
+  	font-family: 'Roboto';
+  	src: local(Roboto), /*Проверка шрифта на предустановленность*/
+  		 url('fonts/Roboto-Regular.woff2') format('woff2'),
+  		 url('fonts/Roboto-Regular.woff') format('woff');
+  	font-weight: 400;
+ 	font-style: normal;
+ 	font-display: swap;  /* отображает стандартный шрифт до того как загрузится основной */
+}
+
+@font-face {
+	font-family : 'Roboto';
+	src: local(Roboto-Black), /*Проверка шрифта на предустановленность*/
+		 url('fonts/Roboto-Bold.woff2') format('woff2'),
+		 url('fonts/Roboto-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;  /* отображает стандартный шрифт до того как загрузится основной */
+}
+
+@font-face {
+		font-family : 'Roboto';
+	src: local(Roboto-Black), /*Проверка шрифта на предустановленность*/
+		 url('fonts/Roboto-Black.woff2') format('woff2'),
+		 url('fonts/Roboto-Black.woff') format('woff');
+	font-weight: 900; 
+	font-style: normal;
+	font-display: swap; /* отображает стандартный шрифт до того как загрузится основной */
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.flying-elements span {
+	display: inline-block;
+}
+
+.info-container__profile-name {
+	align-self: center;
+	color: #1f1f24;
+	font-family: 'Roboto';
+	font-weight: 900;
+	font-size: 80px;
+	line-height: 104.64px;
+	margin-bottom: 6px;
+	}
+
+.profile-info {
+	display: flex;
+	justify-content: flex-end;
+	overflow: hidden;
+	order: 1;
+}
+
+.profile-info-container {
+	height: 768px;
+	display: flex; 
+	justify-content: space-between;
+	align-items: flex-end; 
+	flex-wrap: wrap;
+}
+
+.profile-info-container:not(:last-child) {
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.profile-info__background_gradient{
+ 	margin-top: 30px;
+ 	background: url(img/background.svg);
+ 	display: flex;
+ 	padding-left: 50px;
+ 	background-position: 0% 95%;
+ 	background-repeat: no-repeat;
+ 	padding-right: 310px;
+}
+
+
+.info-gradient {
+	max-width: 1920px;
+	min-width: 320px;
+	height: 364px;
+	background: linear-gradient(to right top, #ff8f5a, #ff2f96);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-right: 20px;
+}
+
+
+.flying-elements__background-grid {
+	color: #ffffff;
+	font-family: 'Roboto';
+	font-size: 55px;
+	font-weight: 700;
+	transform-origin: 0 0 0;
+    transform: translate(-551px, -53px) rotate(18deg);
+    animation-name: tag-1;
+}
+
+.flying-elements__background-div {
+   	color: #ffffff;
+   	font-family: 'Roboto';
+   	font-weight: 700;
+   	font-size: 35px;
+   	transform-origin: 0 0 0;
+    transform: translate(591px, -29px) rotate(21deg);
+    animation-name: tag-2;
+}
+
+.flying-elements__background-brackets {
+	color: #ffffff;
+	font-family: 'Roboto';
+	font-size: 43px;
+	font-weight: 700;
+	transform-origin: 0 0 0;
+	transform-origin: 0 0 0;
+  	transform: translate(-785px, -254px) rotate(28deg);
+  	animation-name: tag-3;
+}
+
+.flying-elements__background-brackets2 {
+	color: #ffffff;
+	font-family: 'Roboto';
+	font-size: 48px;
+	font-weight: 700;
+	transform-origin: 0 0 0;
+	transform: translate(784px, -38px) rotate(-21deg);
+	animation-name: tag-4;
+}
+
+.flying-elements__background-slash {
+	color: #ffffff;
+	font-family: 'Roboto';
+	font-size: 38px;
+	font-weight: 700;
+	transform-origin: 0 0 0;
+	transform: translate(629px, -226px) rotate(-24deg);
+	animation-name: tag-5; 
+} 
+ 
+.white-space { 
+	height: 50px; 
+	width: 100vh; 
+} 
+ 
+a { 
+	text-decoration: none; 
+} 
+ 
+.call-button { 
+	padding: 15px 40px; 
+	border: 1px solid #f53f4f; 
+	font-family: 'Roboto'; 
+	color: #f53f4f; 
+	font-size: 16px; 
+	background-color: white; 
+	cursor: pointer; 
+} 
+ 
+.arrow_shadow { 
+	border-radius: 30px; 
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.08); 
+	background: url(img/arrow.png); 
+	background-color: white; 
+	width: 60px; 
+	height: 60px; 
+	border-width: 0; 
+	cursor: pointer; 
+} 
+ 
+.info-container__button_red { 
+	height: 60px; 
+	width: 270px; 
+	font-family: 'Roboto'; 
+	color: white; 
+	background-color: #ff4e2e;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	flex-grow: 0;
+	align-self: center;
+	margin-top: 44px;
+}
+
+.fa-phone-alt {
+	width: 18px;
+	height: 18px;
+	color: #fa0891;
+}
+
+.fa-envelope {
+	width: 23px;
+	height: 15px;
+	color: #fa0891;
+}
+
+.social-list {
+	display: inline-block;
+	list-style-type: none;
+}
+
+.social-icon_grey {
+	width: 40px;
+	height: 40px;
+	background: url(img/sprite.png);
+	background-size: 400px;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.vk {
+	background-position: 22% 3%;
+}
+
+.facebook {
+	background-position: 41% 3%;
+}
+
+.twitter {
+	background-position: 60% 4%;
+}
+
+.instagram {
+	background-position: 96% 4%;
+}
+
+.social-list li {
+	display: inline-block;
+}
+
+.contact-list {
+	list-style-type: none;
+}
+
+.contact-list a {
+	font-family: 'Roboto';
+	color: black;
+	font-size: 17px;
+}
+.info-container__text {
+	color: #8993ad;
+	font-family: 'Roboto';
+	font-size: 25px;
+	width: 487px;
+	margin-bottom: 2px;
+	margin-top: 0;
+}
+
+.info-container {
+	padding-bottom: 74px;
+	margin-left: 366px;
+}
+
+.info-container__div_gradient {
+	background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%);
+	font-family: 'Roboto';
+	font-size: 30px;
+	font-weight: 700;
+	-webkit-background-clip: text;
+	color: transparent;
+	transform-origin: 0 0 0;
+	transform: translate(409px, -390px) rotate(-14deg);
+	animation-name: tag-1;
+}
+
+
+.info-container__div2_gradient {
+	background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%);
+	font-family: 'Roboto';
+	font-size: 38px;
+	font-weight: 700;
+	-webkit-background-clip: text;
+	color: transparent;
+	transform: translate(587px, -112px) rotate(22deg);
+	transform-origin: 0 0 0;
+	animation-name: tag-2;
+}
+
+.info-container__slash_gradient {
+	background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%);
+	font-family: 'Roboto';
+	font-size: 38px;
+	font-weight: 700;
+	-webkit-background-clip: text;
+	color: transparent;
+	transform: translate(70px, -41px) rotate(-23deg);
+	transform-origin: 0 0 0;
+	animation-name: tag-3;
+}
+
+.info-container__brackets_gradient {
+	background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%);
+	font-family: 'Roboto';
+	font-size: 50px;
+	font-weight: 700;
+	-webkit-background-clip: text;
+	color: transparent;
+	transform: translate(-229px, 77px) rotate(28deg);
+	transform-origin: 0 0 0;
+	animation-name: tag-4;
+}
+
+.info-container__grid_gradient {
+	background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%);
+	font-family: 'Roboto';
+	font-size: 56px;
+	font-weight: 700;
+	-webkit-background-clip: text;
+	color: transparent;
+	transform-origin: 0 0 0;
+	transform: translate(-118px, 195px) rotate(17deg);
+	animation-name: tag-5;
+}
+
+.info-gradient__header {
+	color: #ffffff;
+	font-family: 'Roboto';
+	font-size: 45px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 60px;
+	width: 906px;
+	text-align: left;
+	margin-bottom: 32px;
+    margin-top: 76px;
+}
+
+.info-gradient__text {
+	font-size: 18px;
+	font-family: 'Roboto';
+	width: 900;
+	text-align: left;
+	color: #ffffff;
+	line-height: 26px;
+	margin-top: 0px;
+
+}
+
+.animated-item {
+	animation-duration: 5s;
+  	z-index: 999;
+}
+
+@keyframes tag-1 {
+	0% {
+		top: 80%;
+		left: 70%;
+		font-size: 0;
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes tag-2 {
+	0% {
+		top: 80%;
+		left: 70%;
+		font-size: 0;
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes tag-3 {
+	0% {
+		top: 10%;
+		left: 80%;
+		font-size: 0;
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes tag-4 {
+	0% {
+		top: 55%;
+		left: 17%;
+		font-size: 0;
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes tag-5 {
+	0% {
+		top: 0;
+		left: 0;
+		font-size: 0;
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes tag-6 {
+	0% {
+		top: 0;
+		left: 0;
+		font-size: 0;
+		transform: rotate(-360deg);
+	}
+}
